@@ -1,23 +1,42 @@
-data/
+# Keep directory structure but ignore content
+data/*
+!data/.gitkeep
+
+models/*
+!models/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
 .ipynb_checkpoints
-.bin
-*.db
 
-*.parquet
-*.html
-*.csv
-
+# Environment
 .venv
 venv
-.idea
-**/artifacts/
-**/models/
+.env
+*.env
 
-__pycache__/
-**.env
-**.terraform/
-**.terraform.lock*
-**terraform.tfstate*
+# Data files
+*.parquet
+*.csv
+*.db
 
+# Model files
+*.bin
+*.pkl
+*.joblib
+*.h5
+*.onnx
+*.tflite
 
+# Terraform
+.terraform/
+.terraform.lock*
+terraform.tfstate*
+
+# Misc
 .DS_Store
+.idea
+*.html
+**/artifacts/
